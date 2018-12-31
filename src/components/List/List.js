@@ -3,9 +3,7 @@ import ListItem from '../ListItem/ListItem'
 
 const List = (props) => (
   <ul>
-    <ListItem id="1" title="test1"/>
-    <ListItem id="2" title="test2"/>
-    <ListItem id="3" title="test3"/>
+    {props.shows.map((item, index) => <ListItem key={item.show.id} show={item.show}></ListItem>)}
   </ul>
   )
   
